@@ -52,6 +52,7 @@
     vscode   
 
     # CLI's
+    leetcode-cli
     file
     gnupg
     git
