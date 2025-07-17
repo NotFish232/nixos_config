@@ -67,6 +67,9 @@
     vim
     neovim
     docker
+
+    # Tools
+    mypy
     ripgrep
 
     # Programming Languages
