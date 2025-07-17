@@ -71,6 +71,7 @@
     # Tools
     mypy
     ripgrep
+    lrzip
 
     # Programming Languages
     (pkgs.buildEnv {
