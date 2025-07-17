@@ -81,6 +81,11 @@
     #media-session.enable = true;
   };
 
+  fonts.packages = with pkgs; [
+    fira-code
+    fira-code-symbols
+  ];
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -88,6 +93,7 @@
   users.users.justin = {
     isNormalUser = true;
     description = "Justin Lee";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "docker"];
   };
 
@@ -107,6 +113,7 @@
   virtualisation.docker.enable = true;
 
   programs.gnupg.agent.enable = true;
+  programs.zsh.enable = true;
 
 
 

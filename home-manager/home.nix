@@ -65,8 +65,10 @@
     cmake
     gradle
     vim
+    neovim
     docker
-    
+    ripgrep
+
     # Programming Languages
     (pkgs.buildEnv {
       name = "multi-python";
@@ -78,7 +80,17 @@
     nodejs_24
     jdk24
     flutter
-    ];
+  ];
+
+  programs.zsh = {
+    enable = true;
+    syntaxHighlighting.enable = true;
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "agnoster";
+    };
+  };
 
   # Install Home Manager
   programs.home-manager.enable = true;
