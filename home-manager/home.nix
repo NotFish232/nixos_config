@@ -72,8 +72,9 @@
       ignoreCollisions = true; 
     })
     rustup
-    jdk24
+    gcc
     nodejs_24
+    jdk24
     flutter
     ];
 
