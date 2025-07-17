@@ -54,6 +54,7 @@
     # CLI's
     leetcode-cli
     file
+    neofetch
     gnupg
     git
     gh
