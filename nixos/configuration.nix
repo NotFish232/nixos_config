@@ -128,11 +128,14 @@
   #   enableSSHSupport = true;
   # };
 
-
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+
+  # Switch to TLP for power profiles
+  services.power-profiles-daemon.enable = false;
+  services.tlp.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
