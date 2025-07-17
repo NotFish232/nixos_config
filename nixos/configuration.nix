@@ -105,8 +105,8 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-  docker
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.power-tracker
   ];
 
   # Enable Docker
@@ -115,6 +115,9 @@
   programs.gnupg.agent.enable = true;
   programs.zsh.enable = true;
 
+
+  # Fix Times on Windows
+  time.hardwareClockInLocalTime = true;
 
 
   # Some programs need SUID wrappers, can be configured further or are
