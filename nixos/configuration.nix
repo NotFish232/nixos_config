@@ -137,6 +137,9 @@
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
 
+  # Stop bluetooth from starting when the system starts
+  hardware.bluetooth.powerOnBoot = false;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
