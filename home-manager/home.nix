@@ -96,6 +96,14 @@
     enable = true;
     syntaxHighlighting.enable = true;
 
+    shellAliases = {
+      "n-update" = "nix flake update";
+      "n-switch" = "sudo nixos-rebuild switch --flake .#nixos";
+      "n-list" = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
+      "n-del" = "sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system";
+      "n-gc" = "nix-collect-garbage -d";
+    };
+
     oh-my-zsh = {
       enable = true;
       theme = "agnoster";
