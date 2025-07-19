@@ -55,21 +55,24 @@
     leetcode-cli
     file
     neofetch
-    gnupg
-    git
-    gh
     cloc
     acpi
     lm_sensors
+
+    # Utilies
+    gnupg
+    git
+    gh
+    docker
+    vim
+    neovim
+
+    # Tools
     gnumake
     cmake
     gradle
-    vim
-    neovim
-    docker
-
-    # Tools
     mypy
+    black
     ripgrep
     lrzip
 
