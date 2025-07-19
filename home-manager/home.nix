@@ -74,7 +74,7 @@
     lrzip
 
     # Programming Languages
-    (pkgs.buildEnv {
+    (buildEnv {
       name = "multi-python";
       paths = [ python310 python314 ];
       ignoreCollisions = true; 
@@ -84,6 +84,12 @@
     nodejs_24
     jdk24
     flutter
+    (pkgs.texlive.combine {
+    inherit (pkgs.texlive.pkgs)
+      scheme-minimal
+      latex-bin
+      ;
+    })
   ];
 
   programs.zsh = {
