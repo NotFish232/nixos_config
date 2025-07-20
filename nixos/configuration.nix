@@ -94,7 +94,7 @@
     isNormalUser = true;
     description = "Justin Lee";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "docker"];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
   # Allow unfree packages
@@ -108,6 +108,7 @@
     keyd
     gnomeExtensions.dash-to-dock
     gnomeExtensions.power-tracker
+    gnomeExtensions.just-perfection
   ];
 
   # Enable Docker
