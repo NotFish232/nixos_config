@@ -105,6 +105,7 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+    keyd
     gnomeExtensions.dash-to-dock
     gnomeExtensions.power-tracker
   ];
@@ -136,6 +137,9 @@
   # Switch to TLP for power profiles
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
+
+  # Keyd
+  services.keyd.enable = true;
 
   # Stop bluetooth from starting when the system starts
   hardware.bluetooth.powerOnBoot = false;
