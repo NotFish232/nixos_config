@@ -117,6 +117,12 @@
       enable = true;
       theme = "agnoster";
     };
+
+    initContent = ''
+      if [[ -n "$IN_NIX_SHELL" ]]; then
+        PROMPT="(nix-env) ''${PROMPT}"
+      fi
+    '';
   };
 
   # Install Home Manager
