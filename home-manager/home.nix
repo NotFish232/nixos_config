@@ -6,7 +6,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
@@ -49,7 +50,7 @@
     google-chrome
     discord
     spotify
-    vscode   
+    vscode
 
     # CLI's
     leetcode-cli
@@ -60,6 +61,7 @@
     lm_sensors
 
     # Utilies
+    nixfmt-rfc-style
     gnupg
     git
     gh
@@ -67,7 +69,7 @@
     vim
     neovim
 
-    # Tools
+    # Build Tools
     gnumake
     cmake
     gradle
@@ -79,8 +81,11 @@
     # Programming Languages
     (buildEnv {
       name = "multi-python";
-      paths = [ python310 python314 ];
-      ignoreCollisions = true; 
+      paths = [
+        python310
+        python314
+      ];
+      ignoreCollisions = true;
     })
     rustup
     gcc
@@ -88,10 +93,10 @@
     jdk24
     flutter
     (pkgs.texlive.combine {
-    inherit (pkgs.texlive.pkgs)
-      scheme-minimal
-      latex-bin
-      ;
+      inherit (pkgs.texlive.pkgs)
+        scheme-minimal
+        latex-bin
+        ;
     })
   ];
 
