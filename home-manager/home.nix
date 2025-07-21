@@ -110,7 +110,7 @@
       "n-list" = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
       "n-del" = "sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system";
       "n-gc" = "nix-collect-garbage -d";
-      "n-dev" = "nix develop -c $SHELL";
+      "n-dev" = "nix develop -c zsh";
     };
 
     oh-my-zsh = {
@@ -119,11 +119,20 @@
     };
 
     initContent = ''
-      if [[ -n "$IN_NIX_SHELL" ]]; then
-        PROMPT="(nix-env) ''${PROMPT}"
-      fi
+      function nix_shell_prompt() {
+        if [[ -n "$IN_NIX_SHELL" ]]; then
+          echo "(nix-env) "
+        fi
+      }
+
+      PROMPT='$(nix_shell_prompt)'$PROMPT
     '';
+
   };
+
+  # direnv and nix-direnv
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
 
   # Install Home Manager
   programs.home-manager.enable = true;
