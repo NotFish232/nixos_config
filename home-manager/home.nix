@@ -55,6 +55,7 @@
     # CLI's
     leetcode-cli
     file
+    htop
     neofetch
     cloc
     acpi
