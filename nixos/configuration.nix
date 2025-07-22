@@ -143,6 +143,7 @@
 
   # Switch to TLP for power profiles
   services.power-profiles-daemon.enable = false;
+  # services.auto-cpufreq.enable = true;
   services.tlp = {
     enable = true;
     settings = {
