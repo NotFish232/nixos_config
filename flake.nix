@@ -27,7 +27,7 @@
       # Available through 'nixos-rebuild --flake .#your-hostname'
       nixosConfigurations = {
         # FIXME replace with your hostname
-        nixos = nixpkgs.lib.nixosSystem {
+        not-os = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           # > Our main nixos configuration file <
           modules = [ ./nixos/configuration.nix ];
