@@ -109,7 +109,7 @@
       "n-switch" = "sudo nixos-rebuild switch --flake .#not-os";
       "n-list" = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
       "n-del" = "sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system";
-      "n-gc" = "nix-collect-garbage -d";
+      "n-gc" = "sudo nix-collect-garbage -d";
       "n-dev" = "nix develop -c zsh";
     };
 
