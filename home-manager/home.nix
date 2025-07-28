@@ -68,7 +68,6 @@
     gh
     docker
     vim
-    neovim
 
     # Build Tools
     gnumake
