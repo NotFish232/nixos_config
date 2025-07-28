@@ -160,6 +160,9 @@
   # Stop bluetooth from starting when the system starts
   hardware.bluetooth.powerOnBoot = false;
 
+  # Auto optimise store
+  nix.settings.auto-optimise-store = true;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
