@@ -64,6 +64,7 @@
 
     # Utilies
     nixfmt-rfc-style
+    xclip
     gnupg
     git
     gh
