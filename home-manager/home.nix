@@ -51,6 +51,7 @@
     discord
     spotify
     vscode
+    inkscape
 
     # CLI's
     leetcode-cli
