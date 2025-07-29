@@ -120,6 +120,24 @@
     };
 
     initContent = ''
+      function v() {
+        is_active="$(nmcli -f GENERAL.STATE con show $1 | grep activated)"
+
+        if [ $is_active ]; then
+            nmcli connection down $1
+        else
+          nmcli connection up $1 --ask
+        fi
+      }
+
+      function _nmcli_connections() {
+        local -a connections
+        connections=(''${(f)"$(nmcli -t -f NAME connection show)"})
+        compadd "$@" -- "''${connections[@]}"
+      }
+
+      compdef _nmcli_connections v
+
       function nix_shell_prompt() {
         if [[ -n "$IN_NIX_SHELL" ]]; then
           echo "(nix-env) "
