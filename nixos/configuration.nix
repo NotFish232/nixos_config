@@ -163,6 +163,11 @@
   # Auto optimise store
   nix.settings.auto-optimise-store = true;
 
+  # Add openconnect plugin to NetworkManager
+  networking.networkmanager.plugins = with pkgs; [
+    networkmanager-openconnect
+  ];
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
