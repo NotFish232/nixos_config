@@ -28,12 +28,11 @@
       nixosConfigurations = {
         not-os = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          # > Our main nixos configuration file <
-          modules = [ ./nixos/configuration.nix ];
+          modules = [ ./not-os/configuration.nix ];
         };
         not-server = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./temp/configuration.nix ];
+          modules = [ ./not-server/configuration.nix ];
         };
       };
     };
