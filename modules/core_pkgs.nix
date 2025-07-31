@@ -14,6 +14,7 @@
       git
       gh
 
+      tmux
       xclip
       file
       gnupg
