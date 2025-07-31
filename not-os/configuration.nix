@@ -128,18 +128,9 @@
   # Fix Times on Windows
   time.hardwareClockInLocalTime = true;
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  services.tailscale.enable = true;
 
   # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Switch to TLP for power profiles
   services.power-profiles-daemon.enable = false;
