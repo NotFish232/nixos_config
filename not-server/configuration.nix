@@ -114,4 +114,15 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
 
+  systemd.services.ircSession = {
+    wantedBy = [ "multi-user.target" ];
+    after = [ "network.target" ];
+    description = "Run the github-readme-stats repository";
+    serviceConfig = {
+      Type = "notify";
+      User = "justin";
+      ExecStart = ''${pkgs.runtimeShell} -c "cd ~/github-readme-stats && nix develop --command node express.js"'';
+    };
+  };
+
 }
