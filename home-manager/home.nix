@@ -114,6 +114,7 @@
       "n-del" = "sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system";
       "n-gc" = "sudo nix-collect-garbage -d";
       "n-dev" = "nix develop -c zsh";
+      "x" = "xclip -sel clip";
     };
 
     oh-my-zsh = {
