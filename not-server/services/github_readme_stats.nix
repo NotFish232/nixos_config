@@ -16,12 +16,15 @@
 
   systemd.services.funnel-github-readme-stats = {
     wantedBy = [ "multi-user.target" ];
-    after = [ "tailscaled.service" "sys-subsystem-net-devices-tailscale0.device" ];
+    after = [
+      "tailscaled.service"
+      "sys-subsystem-net-devices-tailscale0.device"
+    ];
     description = "Tailscale forward the github-readme-stats repository";
     serviceConfig = {
       Type = "simple";
       User = "justin";
-      ExecStart = ''${pkgs.tailscale}/bin/tailscale funnel 9000'';
+      ExecStart = ''${pkgs.bash}/bin/bash -c "${pkgs.coreutils}/bin/sleep 15 && ${pkgs.tailscale}/bin/tailscale funnel 9000"'';
     };
   };
 }
