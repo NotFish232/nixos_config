@@ -115,13 +115,14 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
   systemd.services.github-readme-stats = {
+    path = [ pkgs.nix ];
     wantedBy = [ "multi-user.target" ];
     after = [ "network.target" ];
     description = "Run the github-readme-stats repository";
     serviceConfig = {
       Type = "notify";
       User = "justin";
-      ExecStart = ''${pkgs.runtimeShell} -c "cd ~/github-readme-stats && nix develop --command node express.js"'';
+      ExecStart = ''bash -c "cd ~/github-readme-stats && nix develop --command node express.js"'';
     };
   };
 
