@@ -56,7 +56,7 @@
 
     # CLI's
     leetcode-cli
-    
+
     # Utilies
     nixfmt-rfc-style
     docker

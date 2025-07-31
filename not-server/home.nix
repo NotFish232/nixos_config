@@ -45,9 +45,6 @@
     homeDirectory = "/home/justin";
   };
 
-
-
-
   # Install Home Manager
   programs.home-manager.enable = true;
 
