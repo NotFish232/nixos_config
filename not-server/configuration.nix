@@ -115,7 +115,7 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
   systemd.services.github-readme-stats = {
-    path = [ pkgs.nix ];
+    path = [ pkgs.bash ];
     wantedBy = [ "multi-user.target" ];
     after = [ "network.target" ];
     description = "Run the github-readme-stats repository";
