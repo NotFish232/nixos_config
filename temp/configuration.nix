@@ -63,6 +63,7 @@
   users.users.justin = {
     isNormalUser = true;
     description = "Justin Lee";
+    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"
