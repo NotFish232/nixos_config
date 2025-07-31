@@ -73,8 +73,8 @@
     (buildEnv {
       name = "multi-python";
       paths = [
-        python310
         python314
+        python310
       ];
       ignoreCollisions = true;
     })
