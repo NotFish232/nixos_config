@@ -70,6 +70,7 @@
     ];
     packages = with pkgs; [ ];
   };
+  
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -88,6 +89,7 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+  programs.zsh.enable = true;
 
   # List services that you want to enable:
 
