@@ -15,6 +15,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     ../modules/zsh.nix
+    ../modules/core_pkgs.nix
   ];
 
   # nixpkgs = {
@@ -55,22 +56,10 @@
 
     # CLI's
     leetcode-cli
-    file
-    htop
-    neofetch
-    cloc
-    acpi
-    lm_sensors
-
+    
     # Utilies
     nixfmt-rfc-style
-    zip
-    xclip
-    gnupg
-    git
-    gh
     docker
-    vim
 
     # Build Tools
     gnumake
@@ -79,7 +68,6 @@
     mypy
     black
     ripgrep
-    lrzip
 
     # Programming Languages
     (buildEnv {
