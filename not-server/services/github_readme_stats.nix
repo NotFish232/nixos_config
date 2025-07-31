@@ -16,7 +16,7 @@
 
   systemd.services.funnel-github-readme-stats = {
     wantedBy = [ "multi-user.target" ];
-    after = [ "github-readme-stats.service" ];
+    after = [ "tailscaled.service" "github-readme-stats.service" ];
     description = "Tailscale forward the github-readme-stats repository";
     serviceConfig = {
       Type = "simple";
