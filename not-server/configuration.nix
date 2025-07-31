@@ -122,7 +122,7 @@
       Type = "notify";
       User = "justin";
       WorkingDirectory = "/home/justin/github-readme-stats";
-      ExecStart = ''${pkgs.nix}/bin/nix --command ${pkgs.nodejs_24}/bin/node express.js'';
+      ExecStart = ''${pkgs.nix}/bin/nix develop --command ${pkgs.nodejs_24}/bin/node express.js'';
     };
   };
 
