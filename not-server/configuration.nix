@@ -14,6 +14,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    ./services/github_readme_stats.nix
   ];
 
   home-manager.useGlobalPkgs = true;
@@ -114,29 +115,5 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
 
-  systemd.services.github-readme-stats = {
-    path = with pkgs; [ git ];
-    wantedBy = [ "multi-user.target" ];
-    after = [ "network.target" ];
-    description = "Run the github-readme-stats repository";
-    serviceConfig = {
-      Type = "simple";
-      User = "justin";
-      WorkingDirectory = "/home/justin/github-readme-stats";
-      ExecStart = ''${pkgs.nix}/bin/nix develop --command ${pkgs.nodejs_24}/bin/node express.js'';
-    };
-  };
-
-
-  systemd.services.funnel-github-readme-stats = {
-    wantedBy = [ "multi-user.target" ];
-    after = [ "network.target" ];
-    description = "Tailscale forward the github-readme-stats repository";
-    serviceConfig = {
-      Type = "simple";
-      User = "justin";
-      ExecStart = ''${pkgs.tailscale}/bin/tailscale funnel 9000'';
-    };
-  };
 
 }
