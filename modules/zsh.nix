@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   programs.zsh = {
@@ -18,34 +23,44 @@
     oh-my-zsh = {
       enable = true;
       theme = "agnoster";
+      plugins = [
+        "tmux"
+      ];
     };
 
-    initContent = ''
-      function v() {
-        is_active="$(nmcli -f GENERAL.STATE con show $1 | grep activated)"
+    initContent = lib.mkMerge [
+      (lib.mkOrder 500 ''
+        [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit; }
+      '')
 
-        if [ $is_active ]; then
-            nmcli connection down $1
-        else
-          nmcli connection up $1 --ask
-        fi
-      }
+      (lib.mkOrder 1000 ''
+        function v() {
+          is_active="$(nmcli -f GENERAL.STATE con show $1 | grep activated)"
 
-      function _nmcli_connections() {
-        local -a connections
-        connections=(''${(f)"$(nmcli -t -f NAME connection show)"})
-        compadd "$@" -- "''${connections[@]}"
-      }
+          if [ $is_active ]; then
+              nmcli connection down $1
+          else
+            nmcli connection up $1 --ask
+          fi
+        }
 
-      compdef _nmcli_connections v
+        function _nmcli_connections() {
+          local -a connections
+          connections=(''${(f)"$(nmcli -t -f NAME connection show)"})
+          compadd "$@" -- "''${connections[@]}"
+        }
 
-      function nix_shell_prompt() {
-        if [[ -n "$IN_NIX_SHELL" ]]; then
-          echo "(nix-env) "
-        fi
-      }
+        compdef _nmcli_connections v
 
-      PROMPT='$(nix_shell_prompt)'$PROMPT
-    '';
+
+        function nix_shell_prompt() {
+          if [[ -n "$IN_NIX_SHELL" ]]; then
+            echo "(nix-env) "
+          fi
+        }
+
+        PROMPT='$(nix_shell_prompt)'$PROMPT
+      '')
+    ];
   };
 }

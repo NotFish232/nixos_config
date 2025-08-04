@@ -16,6 +16,7 @@
     # You can also split up your configuration and import pieces of it here:
     ../modules/zsh.nix
     ../modules/core_pkgs.nix
+    ../modules/tmux.nix
   ];
 
   # nixpkgs = {
