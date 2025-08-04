@@ -14,8 +14,9 @@
     # inputs.nix-colors.homeManagerModule
 
     # You can also split up your configuration and import pieces of it here:
-    ../modules/zsh.nix
+    ../modules/gnome.nix
     ../modules/core_pkgs.nix
+    ../modules/zsh.nix
     ../modules/tmux.nix
   ];
 

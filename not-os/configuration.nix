@@ -115,8 +115,8 @@
     #  wget
     keyd
     gnomeExtensions.dash-to-dock
-    gnomeExtensions.power-tracker
     gnomeExtensions.just-perfection
+    gnomeExtensions.power-tracker
   ];
 
   # Enable Docker

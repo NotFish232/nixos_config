@@ -30,7 +30,7 @@
 
     initContent = lib.mkMerge [
       (lib.mkOrder 500 ''
-        [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit; }
+        [ -z "$TMUX"  ] && { tmux new -A }
       '')
 
       (lib.mkOrder 1000 ''
