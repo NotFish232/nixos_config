@@ -25,6 +25,7 @@
 
       "org/gnome/mutter" = {
         dynamic-workspaces = false;
+        experimental-features = [ "variable-refresh-rate" ];
       };
 
       "org/gnome/desktop/peripherals/touchpad" = {
@@ -44,10 +45,13 @@
         transparency-mode = "FIXED";
         background-opacity = 0.2;
         show-show-apps-button = false;
+        running-indicator-style = "DOTS";
+        custom-theme-shrink = true;
       };
 
       "org/gnome/shell/extensions/just-perfection" = {
         activities-button = false;
+        startup-status = 0;
       };
 
       "org/gnome/shell/extensions/powertracker" = {
