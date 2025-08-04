@@ -35,6 +35,7 @@
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
         clock-format = "12h";
+        show-battery-percentage = true;
       };
 
       "org/gnome/shell/extensions/dash-to-dock" = {
