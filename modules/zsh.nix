@@ -30,7 +30,7 @@
 
     initContent = lib.mkMerge [
       (lib.mkOrder 500 ''
-        [ -z "$TMUX"  ] && { tmux new -A }
+        [ -z "$TMUX"  ] && { exec tmux new -A }
       '')
 
       (lib.mkOrder 1000 ''
@@ -38,7 +38,7 @@
           is_active="$(nmcli -f GENERAL.STATE con show $1 | grep activated)"
 
           if [ $is_active ]; then
-              nmcli connection down $1
+            nmcli connection down $1
           else
             nmcli connection up $1 --ask
           fi

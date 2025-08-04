@@ -13,6 +13,7 @@
     ];
 
     extraConfig = ''
+						set -g destroy-unattached on
       			set -g mouse on
 
       			# --- Create Window (Alt+c) ---
