@@ -22,6 +22,7 @@
       neofetch
       cloc
       htop
+      btop
       acpi
       lm_sensors
 
