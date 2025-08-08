@@ -83,7 +83,6 @@
     rustup
     gcc
     nodejs_24
-    jdk24
     flutter
     (pkgs.texlive.combine {
       inherit (pkgs.texlive.pkgs)
@@ -99,6 +98,9 @@
 
   # Install Home Manager
   programs.home-manager.enable = true;
+
+  # Oh the horror
+  programs.java.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
