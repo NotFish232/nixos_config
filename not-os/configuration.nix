@@ -117,6 +117,7 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.just-perfection
     gnomeExtensions.power-tracker
+    gnomeExtensions.bluetooth-battery-meter
   ];
 
   # Enable Docker
