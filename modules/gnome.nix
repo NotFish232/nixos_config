@@ -78,7 +78,8 @@
         "org/gnome/shell/extensions/spotify-controls" = {
           enable-volume-control = false;
           position = "leftmost-right";
-        };
+          show-track-info = false;
+        }; 
       };
     };
   };
