@@ -6,29 +6,25 @@
 }:
 
 {
-  config.home.packages = lib.mkBefore (
-    with pkgs;
-    [
-      vim
+  config.home.packages = with pkgs; [
+    vim
 
-      git
-      gh
+    git
+    gh
 
-      tmux
-      xclip
-      file
-      gnupg
+    tmux
+    xclip
+    file
+    gnupg
 
-      neofetch
-      cloc
-      htop
-      btop
-      acpi
-      lm_sensors
+    neofetch
+    cloc
+    htop
+    btop
+    acpi
+    lm_sensors
 
-      zip
-      lrzip
-    ]
-  );
-
+    zip
+    lrzip
+  ];
 }

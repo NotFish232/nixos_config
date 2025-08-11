@@ -114,11 +114,6 @@
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
     keyd
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.just-perfection
-    gnomeExtensions.power-tracker
-    gnomeExtensions.bluetooth-battery-meter
-    gnomeExtensions.spotify-controls
   ];
 
   # Enable Docker
