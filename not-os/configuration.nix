@@ -118,6 +118,7 @@
     gnomeExtensions.just-perfection
     gnomeExtensions.power-tracker
     gnomeExtensions.bluetooth-battery-meter
+    gnomeExtensions.spotify-controls
   ];
 
   # Enable Docker

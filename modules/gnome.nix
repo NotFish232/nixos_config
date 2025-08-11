@@ -15,6 +15,7 @@
           gnomeExtensions.just-perfection.extensionUuid
           gnomeExtensions.power-tracker.extensionUuid
           gnomeExtensions.bluetooth-battery-meter.extensionUuid
+          gnomeExtensions.spotify-controls.extensionUuid
         ];
 
       };
@@ -64,6 +65,11 @@
       "org/gnome/shell/extensions/Bluetooth-Battery-Meter" = {
         enable-battery-level-icon = true;
         enable-battery-level-text = true;
+      };
+
+      "org/gnome/shell/extensions/spotify-controls" = {
+        enable-volume-control = false;
+        position = "leftmost-right";
       };
     };
   };
