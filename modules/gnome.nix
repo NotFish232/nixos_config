@@ -13,7 +13,7 @@
       gnomeExtensions.bluetooth-battery-meter
     ];
 
-    home.file.".config/backgrounds/wallpaper.jpg".source = ../assets/wallpaper.jpg;
+    home.file.".config/backgrounds/wallpaper.png".source = ../assets/wallpaper.png;
 
     dconf = {
       enable = true;
@@ -58,8 +58,8 @@
         };
 
         "org/gnome/desktop/background" = {
-          picture-uri="file://${config.home.homeDirectory}/.config/backgrounds/wallpaper.jpg";
-          picture-uri-dark="file://${config.home.homeDirectory}/.config/backgrounds/wallpaper.jpg";
+          picture-uri="file://${config.home.homeDirectory}/.config/backgrounds/wallpaper.png";
+          picture-uri-dark="file://${config.home.homeDirectory}/.config/backgrounds/wallpaper.png";
         };
 
         "org/gnome/shell/extensions/dash-to-dock" = {
