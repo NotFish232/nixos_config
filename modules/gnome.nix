@@ -13,10 +13,21 @@
       gnomeExtensions.bluetooth-battery-meter
     ];
 
+    home.file.".config/backgrounds/wallpaper.jpg".source = ../assets/wallpaper.jpg;
+
     dconf = {
       enable = true;
       settings = {
         "org/gnome/shell" = {
+          favorite-apps = [
+            "org.gnome.Nautilus.desktop"
+            "code.desktop"
+            "org.gnome.Console.desktop"
+            "google-chrome.desktop"
+            "spotify.desktop"
+            "discord.desktop"
+            "org.gnome.SystemMonitor.desktop"
+          ];
           enabled-extensions = with pkgs; [
             gnomeExtensions.dash-to-dock.extensionUuid
             gnomeExtensions.just-perfection.extensionUuid
@@ -44,6 +55,11 @@
           color-scheme = "prefer-dark";
           clock-format = "12h";
           show-battery-percentage = true;
+        };
+
+        "org/gnome/desktop/background" = {
+          picture-uri="file://${config.home.homeDirectory}/.config/backgrounds/wallpaper.jpg";
+          picture-uri-dark="file://${config.home.homeDirectory}/.config/backgrounds/wallpaper.jpg";
         };
 
         "org/gnome/shell/extensions/dash-to-dock" = {
