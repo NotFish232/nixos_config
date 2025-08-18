@@ -100,7 +100,10 @@
   programs.home-manager.enable = true;
 
   # Oh the horror
-  programs.java.enable = true;
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk23.override { enableJavaFX = true; };
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
