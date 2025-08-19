@@ -72,6 +72,8 @@
     ripgrep
 
     # Programming Languages
+
+    # Python
     (buildEnv {
       name = "multi-python";
       paths = [
@@ -80,10 +82,18 @@
       ];
       ignoreCollisions = true;
     })
-    rustup
+    # Rust
+    rustc
+    cargo
+    clippy
+    rust-analyzer
+    # C++
     gcc
+    # JavaScript
     nodejs_24
+    # Dart
     flutter
+    # Latex
     (pkgs.texlive.combine {
       inherit (pkgs.texlive.pkgs)
         scheme-minimal
