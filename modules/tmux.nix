@@ -13,34 +13,35 @@
     ];
 
     extraConfig = ''
-      			set -g mouse on
+      						set -g destroy-unattached on
+            			set -g mouse on
 
-      			# --- Create Window (Alt+c) ---
-      			bind -n M-c new-window
-      			
-      			# --- Window Navigation (Alt+0-9) ---
-      			run-shell -b 'for i in $(seq 0 9); do \
-      				tmux bind -n M-''${i} if-shell "[[ \$(tmux list-windows | grep ^''${i}:) ]]" \
-      				"select-window -t ''${i}" "new-window -t ''${i}"; \
-      			done'
+            			# --- Create Window (Alt+c) ---
+            			bind -n M-c new-window
+            			
+            			# --- Window Navigation (Alt+0-9) ---
+            			run-shell -b 'for i in $(seq 0 9); do \
+            				tmux bind -n M-''${i} if-shell "[[ \$(tmux list-windows | grep ^''${i}:) ]]" \
+            				"select-window -t ''${i}" "new-window -t ''${i}"; \
+            			done'
 
-      			# --- Additional Window Navigation ---
-      			bind -n M-n previous-window
-      			bind -n M-m next-window
+            			# --- Additional Window Navigation ---
+            			bind -n M-n previous-window
+            			bind -n M-m next-window
 
-      			
-      			# --- Kill Pane (Alt+d) ---
-      			bind -n M-d kill-pane
+            			
+            			# --- Kill Pane (Alt+d) ---
+            			bind -n M-d kill-pane
 
-      			# --- Pane Navigation (Alt+h/j/k/l) ---
-      			bind -n M-h select-pane -L
-      			bind -n M-j select-pane -D
-      			bind -n M-k select-pane -U
-      			bind -n M-l select-pane -R
+            			# --- Pane Navigation (Alt+h/j/k/l) ---
+            			bind -n M-h select-pane -L
+            			bind -n M-j select-pane -D
+            			bind -n M-k select-pane -U
+            			bind -n M-l select-pane -R
 
-      			# --- Split Panes ---
-      			bind -n M-b split-window -h
-      			bind -n M-v split-window -v
+            			# --- Split Panes ---
+            			bind -n M-b split-window -h
+            			bind -n M-v split-window -v
     '';
 
   };

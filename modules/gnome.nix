@@ -58,8 +58,8 @@
         };
 
         "org/gnome/desktop/background" = {
-          picture-uri="file://${config.home.homeDirectory}/.config/backgrounds/wallpaper.png";
-          picture-uri-dark="file://${config.home.homeDirectory}/.config/backgrounds/wallpaper.png";
+          picture-uri = "file://${config.home.homeDirectory}/.config/backgrounds/wallpaper.png";
+          picture-uri-dark = "file://${config.home.homeDirectory}/.config/backgrounds/wallpaper.png";
         };
 
         "org/gnome/shell/extensions/dash-to-dock" = {
