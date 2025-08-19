@@ -30,7 +30,7 @@
 
     initContent = lib.mkMerge [
       (lib.mkOrder 500 ''
-        [ -z "$TMUX"  ] && { exec tmux new -A }
+        [ -z "$TMUX"  ] && { exec tmux new }
       '')
 
       (lib.mkOrder 1000 ''
