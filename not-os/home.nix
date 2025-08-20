@@ -54,7 +54,7 @@
     discord
     spotify
     vscode
-    libreoffice-qt6-fresh
+    libreoffice-fresh
     inkscape
 
     # CLI's
