@@ -25,6 +25,7 @@
     lm_sensors
 
     zip
+    unzip
     lrzip
   ];
 }
