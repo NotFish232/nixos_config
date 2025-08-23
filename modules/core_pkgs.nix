@@ -16,6 +16,7 @@
     xclip
     file
     gnupg
+    ffmpeg
 
     neofetch
     cloc
