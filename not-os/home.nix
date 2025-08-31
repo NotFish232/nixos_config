@@ -90,6 +90,7 @@
     rust-analyzer
     # C++
     gcc
+    clang-tools
     # JavaScript
     nodejs_24
     # Dart
