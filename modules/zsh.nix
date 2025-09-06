@@ -53,6 +53,20 @@
         compdef _nmcli_connections v
 
 
+        um() {
+          umount /run/media/$USER/$1
+        }
+
+        _mounted_drives() {
+          local -a mounts
+          mounts=(''${(f)"$(ls -1 /run/media/$USER)"})
+          compadd "$@" -- "''${mounts[@]}"
+        }
+
+
+        compdef _mounted_drives um
+
+
         function nix_shell_prompt() {
           if [[ -n "$IN_NIX_SHELL" ]]; then
             echo "(nix-env) "
