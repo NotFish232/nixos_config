@@ -18,6 +18,7 @@
       "n-gc" = "sudo nix-collect-garbage -d";
       "n-dev" = "nix develop -c zsh";
       "x" = "xclip -sel clip";
+      "um" = "umount /run/media/$USER/*";
     };
 
     oh-my-zsh = {
