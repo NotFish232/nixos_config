@@ -13,42 +13,42 @@
     ];
 
     extraConfig = ''
-      									# destroy unattached sessions
-            						set -g destroy-unattached on
+      # destroy unattached sessions
+      set -g destroy-unattached on
 
-      									# enable mouse
-                  			set -g mouse on
-      									
-      									# slower scrolling
-      									bind -Tcopy-mode WheelUpPane send -N1 -X scroll-up
-      									bind -Tcopy-mode WheelDownPane send -N1 -X scroll-down
+      # enable mouse
+      set -g mouse on
 
-                  			# --- Create Window (Alt+c) ---
-                  			bind -n M-c new-window
-                  			
-                  			# --- Window Navigation (Alt+0-9) ---
-                  			run-shell -b 'for i in $(seq 0 9); do \
-                  				tmux bind -n M-''${i} if-shell "[[ \$(tmux list-windows | grep ^''${i}:) ]]" \
-                  				"select-window -t ''${i}" "new-window -t ''${i}"; \
-                  			done'
+      # slower scrolling
+      bind -Tcopy-mode WheelUpPane send -N1 -X scroll-up
+      bind -Tcopy-mode WheelDownPane send -N1 -X scroll-down
 
-                  			# --- Additional Window Navigation ---
-                  			bind -n M-n previous-window
-                  			bind -n M-m next-window
+      # --- Create Window (Alt+c) ---
+      bind -n M-c new-window
 
-                  			
-                  			# --- Kill Pane (Alt+d) ---
-                  			bind -n M-d kill-pane
+      # --- Window Navigation (Alt+0-9) ---
+      run-shell -b 'for i in $(seq 0 9); do \
+      	tmux bind -n M-''${i} if-shell "[[ \$(tmux list-windows | grep ^''${i}:) ]]" \
+      	"select-window -t ''${i}" "new-window -t ''${i}"; \
+      done'
 
-                  			# --- Pane Navigation (Alt+h/j/k/l) ---
-                  			bind -n M-h select-pane -L
-                  			bind -n M-j select-pane -D
-                  			bind -n M-k select-pane -U
-                  			bind -n M-l select-pane -R
+      # --- Additional Window Navigation ---
+      bind -n M-n previous-window
+      bind -n M-m next-window
 
-                  			# --- Split Panes ---
-                  			bind -n M-b split-window -h
-                  			bind -n M-v split-window -v
+
+      # --- Kill Pane (Alt+d) ---
+      bind -n M-d kill-pane
+
+      # --- Pane Navigation (Alt+h/j/k/l) ---
+      bind -n M-h select-pane -L
+      bind -n M-j select-pane -D
+      bind -n M-k select-pane -U
+      bind -n M-l select-pane -R
+
+      # --- Split Panes ---
+      bind -n M-b split-window -h
+      bind -n M-v split-window -v
     '';
 
   };
