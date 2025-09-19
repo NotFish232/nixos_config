@@ -131,16 +131,16 @@
 
   # Switch to TLP for power profiles
   services.power-profiles-daemon.enable = false;
-  services.auto-cpufreq.enable = true;
-  # services.tlp = {
-  #   enable = true;
-  #   settings = {
-  #     CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-  #     CPU_SCALING_GOVERNOR_ON_AC = "performance";
-  #     CPU_BOOST_ON_BAT = 0;
-  #     CPU_BOOST_ON_AC = 1;
-  #   };
-  # };
+  # services.auto-cpufreq.enable = true;
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_BOOST_ON_BAT = 0;
+      CPU_BOOST_ON_AC = 1;
+    };
+  };
 
   # Keyd
   services.keyd.enable = true;
