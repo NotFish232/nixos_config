@@ -111,6 +111,12 @@
   # Install Home Manager
   programs.home-manager.enable = true;
 
+  # add vcs none to cargo config
+  home.file.".cargo/config.toml".text = ''
+    [cargo-new]
+    vcs = "none"
+  '';
+
   # Oh the horror
   programs.java = {
     enable = true;
