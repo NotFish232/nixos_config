@@ -10,6 +10,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Fenix
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -17,6 +23,7 @@
       self,
       nixpkgs,
       home-manager,
+      fenix,
       ...
     }@inputs:
     let
@@ -28,7 +35,10 @@
       nixosConfigurations = {
         not-os = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./not-os/configuration.nix ];
+          modules = [
+            { nixpkgs.overlays = [ fenix.overlay.default ]; }
+            ./not-os/configuration.nix
+          ];
         };
         not-server = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };

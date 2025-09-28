@@ -84,10 +84,13 @@
       ignoreCollisions = true;
     })
     # Rust
-    rustc
-    cargo
-    clippy
-    rust-analyzer
+    (fenix.complete.withComponents [
+      "cargo"
+      "clippy"
+      "rustc"
+      "rustfmt"
+    ])
+    rust-analyzer-nightly
     # C++
     gcc
     clang-tools
