@@ -36,7 +36,7 @@
         not-os = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [
-            { nixpkgs.overlays = [ fenix.overlay.default ]; }
+            { nixpkgs.overlays = [ fenix.overlays.default ]; }
             ./not-os/configuration.nix
           ];
         };

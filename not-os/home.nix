@@ -67,10 +67,10 @@
     # Build Tools
     gnumake
     cmake
-    gradle
     mypy
     black
-    ripgrep
+    pkg-config
+    openssl
 
     # Programming Languages
 
@@ -83,6 +83,7 @@
       ];
       ignoreCollisions = true;
     })
+
     # Rust
     (fenix.complete.withComponents [
       "cargo"
@@ -91,13 +92,17 @@
       "rustfmt"
     ])
     rust-analyzer-nightly
+    
     # C++
     gcc
     clang-tools
+
     # JavaScript
     nodejs_24
+
     # Dart
     flutter
+
     # Latex
     (pkgs.texlive.combine {
       inherit (pkgs.texlive.pkgs)
@@ -106,6 +111,8 @@
         ;
     })
   ];
+
+  home.sessionVariables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
 
   # direnv and nix-direnv
   programs.direnv.enable = true;
