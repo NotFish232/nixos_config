@@ -92,7 +92,7 @@
       "rustfmt"
     ])
     rust-analyzer-nightly
-    
+
     # C++
     gcc
     clang-tools
