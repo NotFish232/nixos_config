@@ -89,6 +89,7 @@
       "cargo"
       "clippy"
       "rustc"
+      "rust-src"
       "rustfmt"
     ])
     rust-analyzer-nightly
