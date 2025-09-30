@@ -116,6 +116,9 @@
     keyd
   ];
 
+  # Enable nix-ld
+  programs.nix-ld.enable = true;
+
   # Enable Docker
   virtualisation.docker.enable = true;
 
