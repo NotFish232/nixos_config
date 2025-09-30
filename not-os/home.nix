@@ -95,6 +95,7 @@
     rust-analyzer-nightly
 
     # C++
+    gdb
     gcc
     clang-tools
 
