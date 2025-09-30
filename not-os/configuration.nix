@@ -116,6 +116,11 @@
     keyd
   ];
 
+  # Add overlays for nixpkgs
+  nixpkgs.overlays = [
+    inputs.fenix.overlays.default
+  ];
+
   # Enable nix-ld
   programs.nix-ld.enable = true;
 

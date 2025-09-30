@@ -35,10 +35,7 @@
       nixosConfigurations = {
         not-os = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            { nixpkgs.overlays = [ fenix.overlays.default ]; }
-            ./not-os/configuration.nix
-          ];
+          modules = [ ./not-os/configuration.nix ];
         };
         not-server = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
