@@ -19,6 +19,7 @@
       "n-dev" = "nix develop -c zsh";
       "x" = "xclip -sel clip";
       "um" = "umount /run/media/$USER/*";
+      "t" = "acpi -t";
     };
 
     oh-my-zsh = {
