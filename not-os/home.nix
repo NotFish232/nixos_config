@@ -132,11 +132,21 @@
     vcs = "none"
   '';
 
+  # add clang formatting options to config
+  home.file.".clang-format".text = ''
+    BasedOnStyle: LLVM
+    UseTab: Never
+    IndentWidth: 4
+    TabWidth: 4
+    AllowShortIfStatementsOnASingleLine: false
+    IndentCaseLabels: false
+    ColumnLimit: 0
+    AccessModifierOffset: -4
+    FixNamespaceComments: false
+  '';
+
   # Oh the horror
-  programs.java = {
-    enable = true;
-    package = pkgs.jdk23.override { enableJavaFX = true; };
-  };
+  programs.java.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

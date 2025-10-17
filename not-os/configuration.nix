@@ -133,7 +133,8 @@
   # Fix Times on Windows
   time.hardwareClockInLocalTime = true;
 
-  services.tailscale.enable = true;
+  # not used right now
+  # services.tailscale.enable = true;
 
   # List services that you want to enable:
 
