@@ -123,10 +123,10 @@
     ];
     LD_LIBRARY_PATH = lib.concatStringsSep ":" [
       (lib.makeLibraryPath [
-        pkgs.stdenv.cc.cc
+        pkgs.stdenv.cc.cc.lib
         pkgs.zlib
-        pkgs.openssl
-        pkgs.clang.cc
+        pkgs.openssl.out
+        pkgs.clang.cc.lib
       ])
       "$LD_LIBRARY_PATH"
     ];
