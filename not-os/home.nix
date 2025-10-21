@@ -115,8 +115,21 @@
   ];
 
   home.sessionVariables = {
-    PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig:$PKG_CONFIG_PATH";
-    LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.zlib}/lib:${pkgs.openssl.out}/lib:${pkgs.clang.cc.lib}/lib:$LD_LIBRARY_PATH";
+    PKG_CONFIG_PATH = lib.concatStringsSep ":" [
+      (lib.makeSearchPath "lib/pkgconfig" [
+        pkgs.openssl.dev
+      ])
+      "$PKG_CONFIG_PATH"
+    ];
+    LD_LIBRARY_PATH = lib.concatStringsSep ":" [
+      (lib.makeLibraryPath [
+        pkgs.stdenv.cc.cc
+        pkgs.zlib
+        pkgs.openssl
+        pkgs.clang.cc
+      ])
+      "$LD_LIBRARY_PATH"
+    ];
   };
 
   # direnv and nix-direnv
