@@ -62,6 +62,13 @@
         }
 
         PROMPT='$(nix_shell_prompt)'$PROMPT
+
+        # Python on NixOS is horrid
+        unset _PYTHON_SYSCONFIGDATA_NAME
+        unset _PYTHON_HOST_PLATFORM 
+        unset SOURCE_DATE_EPOCH
+        unset CXX
+        unset CC
       '')
     ];
   };

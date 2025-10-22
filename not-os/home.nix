@@ -73,7 +73,7 @@
     openssl
 
     # Programming Languages
-
+    
     # Python
     (buildEnv {
       name = "multi-python";
@@ -83,6 +83,7 @@
       ];
       ignoreCollisions = true;
     })
+    uv
 
     # Rust
     (fenix.complete.withComponents [

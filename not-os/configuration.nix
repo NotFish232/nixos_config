@@ -133,6 +133,9 @@
   # Fix Times on Windows
   time.hardwareClockInLocalTime = true;
 
+  # Enable OpenGL
+  hardware.opengl.enable = true;
+
   # not used right now
   # services.tailscale.enable = true;
 
