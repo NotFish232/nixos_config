@@ -56,6 +56,7 @@
     vscode
     libreoffice-fresh
     inkscape
+    audacity
 
     # CLI's
     leetcode-cli
