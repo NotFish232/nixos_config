@@ -132,7 +132,7 @@
 
   # Fix Times on Windows
   time.hardwareClockInLocalTime = true;
-  
+
   # not used right now
   # services.tailscale.enable = true;
 
