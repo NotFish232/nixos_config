@@ -20,6 +20,15 @@
   home-manager.useUserPackages = true;
 
   home-manager.users.justin = import ./home.nix;
+  home-manager.extraSpecialArgs = { inherit inputs; };
+
+  # Swapfile
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 32 * 1024; # 16 GB
+    }
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

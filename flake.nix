@@ -16,6 +16,9 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Zed
+    zed.url = "github:zed-industries/zed";
   };
 
   outputs =
@@ -24,6 +27,7 @@
       nixpkgs,
       home-manager,
       fenix,
+      zed,
       ...
     }@inputs:
     let
@@ -36,10 +40,6 @@
         not-os = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ ./not-os/configuration.nix ];
-        };
-        not-server = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
-          modules = [ ./not-server/configuration.nix ];
         };
       };
     };

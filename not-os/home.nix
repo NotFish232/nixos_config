@@ -54,7 +54,7 @@
     discord
     spotify
     vscode
-    zed-editor
+    inputs.zed.packages.${pkgs.system}.default
     libreoffice-fresh
     inkscape
     audacity
