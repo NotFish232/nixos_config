@@ -22,6 +22,7 @@
           favorite-apps = [
             "org.gnome.Nautilus.desktop"
             "code.desktop"
+            "dev.zed.Zed.desktop"
             "org.gnome.Console.desktop"
             "google-chrome.desktop"
             "spotify.desktop"

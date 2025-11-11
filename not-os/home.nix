@@ -54,6 +54,7 @@
     discord
     spotify
     vscode
+    zed-editor
     libreoffice-fresh
     inkscape
     audacity
