@@ -13,6 +13,11 @@
     ];
 
     extraConfig = ''
+      # change leader for nested tmux sessions
+      set -g prefix C-a
+      unbind-key C-b
+      bind-key C-a send-prefix
+
       # destroy unattached sessions
       set -g destroy-unattached on
 
