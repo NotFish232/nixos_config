@@ -16,9 +16,6 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Zed
-    zed.url = "github:zed-industries/zed";
   };
 
   outputs =
@@ -27,7 +24,6 @@
       nixpkgs,
       home-manager,
       fenix,
-      zed,
       ...
     }@inputs:
     let
