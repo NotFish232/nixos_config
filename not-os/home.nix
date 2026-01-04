@@ -54,6 +54,7 @@
     discord
     spotify
     vscode
+    obsidian
     libreoffice-fresh
     inkscape
     audacity
