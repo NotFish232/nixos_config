@@ -55,6 +55,12 @@
         compdef _nmcli_connections v
 
 
+        # Locating lib files within the nix store
+        function loc() {
+          find /nix/store -name $1 -printf '%h\n' -quit
+        }
+
+
         function nix_shell_prompt() {
           if [[ -n "$IN_NIX_SHELL" ]]; then
             echo "(nix-env) "
