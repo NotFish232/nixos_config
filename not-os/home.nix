@@ -164,6 +164,7 @@
   # Oh the horror
   programs.java = {
     enable = true;
+    package = pkgs.jdk21.override { enableJavaFX = true; };
   };
 
   # Nicely reload system units when changing configs
