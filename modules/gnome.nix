@@ -27,6 +27,7 @@
             "spotify.desktop"
             "discord.desktop"
             "obsidian.desktop"
+            "android-studio.desktop"
             "org.gnome.SystemMonitor.desktop"
           ];
           enabled-extensions = with pkgs; [
