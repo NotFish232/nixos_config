@@ -128,6 +128,7 @@
   # Add overlays for nixpkgs
   nixpkgs.overlays = [
     inputs.fenix.overlays.default
+    (import ../patches/clang-tools-patch.nix)
   ];
 
   # Enable nix-ld

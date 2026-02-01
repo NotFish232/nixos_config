@@ -100,8 +100,7 @@
 
     # C++
     gdb
-    gcc
-    clang-tools
+    llvmPackages_21.clang-tools
 
     # JavaScript
     nodejs_24
