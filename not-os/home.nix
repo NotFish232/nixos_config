@@ -100,6 +100,7 @@
 
     # C++
     gdb
+    clang
     llvmPackages_21.clang-tools
 
     # JavaScript
