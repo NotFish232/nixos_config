@@ -55,9 +55,9 @@
     spotify
     vscode
     android-studio
-    obsidian
     libreoffice-fresh
     inkscape
+    obs-studio
     audacity
 
     # CLI's
