@@ -36,6 +36,11 @@
       '')
 
       (lib.mkOrder 1000 ''
+        function prompt_dir() {
+          # %1~ shows just the current directory, ~ for home
+          prompt_segment blue black '%1~'
+        }
+
         function v() {
           is_active="$(nmcli -f GENERAL.STATE con show $1 | grep activated)"
 
@@ -59,15 +64,6 @@
         function loc() {
           find /nix/store -name $1 -printf '%h\n' -quit
         }
-
-
-        function nix_shell_prompt() {
-          if [[ -n "$IN_NIX_SHELL" ]]; then
-            echo "(nix-env) "
-          fi
-        }
-
-        PROMPT='$(nix_shell_prompt)'$PROMPT
 
         # Python on NixOS is horrid
         unset _PYTHON_SYSCONFIGDATA_NAME
