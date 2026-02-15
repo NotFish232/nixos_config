@@ -11,6 +11,7 @@
 
     git
     gh
+    git-lfs
 
     tmux
     xclip
