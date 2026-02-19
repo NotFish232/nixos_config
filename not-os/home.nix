@@ -99,9 +99,12 @@
     rust-analyzer-nightly
 
     # C++
-    gdb
     clang
     llvmPackages_21.clang-tools
+    gdb
+    perf
+    
+    
 
     # JavaScript
     nodejs_24
