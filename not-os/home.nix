@@ -150,6 +150,9 @@
   home.file.".cargo/config.toml".text = ''
     [cargo-new]
     vcs = "none"
+
+    [net]
+    git-fetch-with-cli = true
   '';
 
   # add clang formatting options to config
