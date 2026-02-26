@@ -104,8 +104,6 @@
     gdb
     perf
     
-    
-
     # JavaScript
     nodejs_24
 
