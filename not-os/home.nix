@@ -172,6 +172,13 @@
     package = pkgs.jdk21.override { enableJavaFX = true; };
   };
 
+  programs.git = {
+    enable = true;
+    settings = {
+      "url \"git@github.com:\"".insteadOf = "https://github.com/";
+    };
+  };
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
