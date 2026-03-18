@@ -103,7 +103,7 @@
     llvmPackages_21.clang-tools
     gdb
     perf
-    
+
     # JavaScript
     nodejs_24
 

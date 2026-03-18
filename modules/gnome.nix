@@ -11,6 +11,7 @@
       gnomeExtensions.just-perfection
       gnomeExtensions.power-tracker
       gnomeExtensions.bluetooth-battery-meter
+      gnomeExtensions.kimpanel # Language toggling
     ];
 
     home.file.".config/backgrounds/wallpaper.png".source = ../assets/wallpaper.png;
@@ -35,6 +36,7 @@
             gnomeExtensions.just-perfection.extensionUuid
             gnomeExtensions.power-tracker.extensionUuid
             gnomeExtensions.bluetooth-battery-meter.extensionUuid
+            gnomeExtensions.kimpanel.extensionUuid
           ];
 
         };
