@@ -102,6 +102,7 @@
     clang
     llvmPackages_21.clang-tools
     gdb
+    valgrind
     perf
 
     # JavaScript
