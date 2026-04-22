@@ -151,6 +151,11 @@
   # Enable Docker
   virtualisation.docker.enable = true;
 
+  # Enable Steam
+  programs.steam = {
+    enable = true;
+  };
+
   programs.gnupg.agent.enable = true;
   programs.zsh.enable = true;
 
