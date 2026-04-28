@@ -94,6 +94,7 @@
       "clippy"
       "rustc"
       "rust-src"
+      "rust-docs"
       "rustfmt"
     ])
     rust-analyzer-nightly
