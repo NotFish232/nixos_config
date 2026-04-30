@@ -36,9 +36,17 @@
       '')
 
       (lib.mkOrder 1000 ''
+        AGNOSTER_GIT_CLEAN_FG='#000000'
+        AGNOSTER_GIT_DIRTY_FG='#000000'
+
+        function prompt_context() {
+          # Only shows hostname not user
+          prompt_segment black default '%m'
+        }
+
         function prompt_dir() {
           # %1~ shows just the current directory, ~ for home
-          prompt_segment blue black '%1~'
+          prompt_segment blue '#000000' '%1~'
         }
 
         function v() {
