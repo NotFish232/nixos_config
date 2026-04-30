@@ -109,8 +109,8 @@
     # JavaScript
     nodejs_24
 
-    # Dart
-    flutter
+    # Nix
+    nixd
 
     # Latex
     (pkgs.texlive.combine {
