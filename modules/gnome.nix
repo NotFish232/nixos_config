@@ -23,11 +23,11 @@
           favorite-apps = [
             "org.gnome.Nautilus.desktop"
             "code.desktop"
+            "dev.zed.Zed.desktop"
             "org.gnome.Console.desktop"
             "google-chrome.desktop"
             "spotify.desktop"
             "discord.desktop"
-            "android-studio.desktop"
             "com.obsproject.Studio.desktop"
             "org.gnome.SystemMonitor.desktop"
           ];

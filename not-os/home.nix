@@ -54,7 +54,7 @@
     discord
     spotify
     vscode
-    android-studio
+    zed-editor
     libreoffice-fresh
     inkscape
     obs-studio
