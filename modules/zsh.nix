@@ -32,7 +32,9 @@
 
     initContent = lib.mkMerge [
       (lib.mkOrder 500 ''
-        [ "$TERM_PROGRAM" != tmux ] && { exec tmux new }
+        if [[ -o interactive ]] && [[ -t 1 ]] && [[ "$TERM_PROGRAM" != "tmux" ]]; then
+          exec tmux new
+        fi
       '')
 
       (lib.mkOrder 1000 ''
