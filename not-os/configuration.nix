@@ -33,6 +33,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Pin kernel to 6.12 LTS — 6.18.x has unfixed amdgpu regressions on Strix Point (gfx1150).
+  boot.kernelPackages = pkgs.linuxPackages_6_12;
+
   networking.hostName = "not-os"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -74,18 +77,10 @@
     };
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -112,9 +107,6 @@
     nerd-fonts.fira-code
     noto-fonts-cjk-sans # Chinese font
   ];
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.justin = {

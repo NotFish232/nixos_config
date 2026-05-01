@@ -19,7 +19,7 @@
     gnupg
     ffmpeg
 
-    neofetch
+    fastfetch
     cloc
     htop
     btop
