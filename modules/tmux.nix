@@ -46,10 +46,10 @@
       bind -n M-d kill-pane
 
       # --- Pane Navigation (Alt+h/j/k/l) ---
-      bind -n M-h select-pane -L
-      bind -n M-j select-pane -D
-      bind -n M-k select-pane -U
-      bind -n M-l select-pane -R
+      bind -n M-j select-pane -L
+      bind -n M-h select-pane -D
+      bind -n M-l select-pane -U
+      bind -n M-k select-pane -R
 
       # --- Split Panes ---
       bind -n M-b split-window -h
