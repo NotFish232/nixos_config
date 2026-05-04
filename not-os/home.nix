@@ -62,7 +62,7 @@
     leetcode-cli
 
     # Utilies
-    nixfmt-rfc-style
+    nixfmt
     docker
 
     # Build Tools

@@ -15,6 +15,7 @@
 
     tmux
     xclip
+    wl-clipboard
     file
     gnupg
     ffmpeg
