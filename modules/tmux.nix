@@ -25,11 +25,6 @@
       # clipboard / link passthrough
       set -g allow-passthrough on
       set -g set-clipboard on
-      set -as terminal-features "*:RGB,hyperlinks"
-
-      # mouse drag-select pipes to wayland clipboard
-      bind -T copy-mode    MouseDragEnd1Pane send -X copy-pipe-and-cancel "wl-copy"
-      bind -T copy-mode-vi MouseDragEnd1Pane send -X copy-pipe-and-cancel "wl-copy"
 
       # slower scrolling
       bind -Tcopy-mode WheelUpPane send -N1 -X scroll-up
