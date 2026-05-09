@@ -58,9 +58,6 @@
     obs-studio
     audacity
 
-    # for selenium / puppeteer
-    chromium
-
     # CLI's
     leetcode-cli
 
