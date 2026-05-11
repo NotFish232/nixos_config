@@ -56,7 +56,7 @@
     libreoffice-fresh
     inkscape
     obs-studio
-    audacity
+    ollama-rocm
 
     # CLI's
     leetcode-cli
