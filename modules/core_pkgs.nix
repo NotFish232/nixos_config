@@ -17,6 +17,7 @@
     xclip
     wl-clipboard
     file
+    ripgrep
     gnupg
     ffmpeg
 
