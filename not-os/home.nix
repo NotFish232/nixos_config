@@ -152,6 +152,9 @@
 
     [net]
     git-fetch-with-cli = true
+
+    [build]
+    rustflags = ["-C", "target-cpu=native"]
   '';
 
   # add clang formatting options to config
