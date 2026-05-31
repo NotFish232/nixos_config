@@ -22,8 +22,6 @@
     {
       self,
       nixpkgs,
-      home-manager,
-      fenix,
       ...
     }@inputs:
     let

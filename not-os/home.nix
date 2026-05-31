@@ -179,6 +179,10 @@
   programs.git = {
     enable = true;
     settings = {
+      user = {
+        name = "NotFish232";
+        email = "justin.adam.lee@gmail.com";
+      };
       "url \"git@github.com:\"".insteadOf = "https://github.com/";
     };
   };
