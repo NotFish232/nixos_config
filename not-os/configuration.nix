@@ -41,7 +41,6 @@
       efi.canTouchEfiVariables = true;
     };
     kernelPackages = pkgs.linuxPackages_latest;
-    plymouth.enable = true;
   };
 
   networking.hostName = "not-os"; # Define your hostname.
