@@ -97,6 +97,8 @@
       "rustfmt"
     ])
     rust-analyzer-nightly
+    cargo-edit
+    cargo-udeps
 
     # C++
     clang
