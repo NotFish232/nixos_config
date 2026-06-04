@@ -190,6 +190,7 @@
     };
     signing = {
       signByDefault = true;
+      key = "4018C4669C360D25E86434BD5FB2C02407AEC3C7";
     };
   };
 
