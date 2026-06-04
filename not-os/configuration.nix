@@ -15,6 +15,11 @@
     inputs.home-manager.nixosModules.home-manager
   ];
 
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
 
@@ -29,11 +34,15 @@
     }
   ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # Boot
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelPackages = pkgs.linuxPackages_latest;
+    plymouth.enable = true;
+  };
 
   networking.hostName = "not-os"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -75,7 +84,6 @@
       ];
     };
   };
-
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
@@ -122,18 +130,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #  wget
-    keyd
-  ];
-
   # Add overlays for nixpkgs
   nixpkgs.overlays = [
     inputs.fenix.overlays.default
-    (import ../patches/clang-tools-patch.nix)
   ];
 
   # Enable nix-ld
@@ -155,8 +154,6 @@
 
   services.tailscale.enable = true;
 
-  # List services that you want to enable:
-
   # Switch to TLP for power profiles
   services.power-profiles-daemon.enable = false;
   # services.auto-cpufreq.enable = true;
@@ -170,8 +167,19 @@
     };
   };
 
-  # Keyd
-  services.keyd.enable = true;
+  # Keyd and map copilot btn to ctrl
+  services.keyd = {
+    enable = true;
+    keyboards.default = {
+      ids = [ "*" ];
+      settings = {
+        main = {
+          "rightalt" = "leftcontrol";
+          "f23+leftmeta+leftshift" = "rightalt";
+        };
+      };
+    };
+  };
 
   # Stop bluetooth from starting when the system starts
   hardware.bluetooth.powerOnBoot = false;
