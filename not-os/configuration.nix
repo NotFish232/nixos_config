@@ -151,6 +151,7 @@
   # Fix Times on Windows
   time.hardwareClockInLocalTime = true;
 
+  # Tailscale
   services.tailscale.enable = true;
 
   # Switch to TLP for power profiles
