@@ -99,6 +99,7 @@
     rust-analyzer-nightly
     cargo-edit
     cargo-udeps
+    cargo-expand
 
     # C++
     clang
