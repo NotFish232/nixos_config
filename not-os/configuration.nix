@@ -134,6 +134,15 @@
     inputs.fenix.overlays.default
   ];
 
+  # Settings for using IPAD as second monitor
+  systemd.services.gnome-remote-desktop = {
+    wantedBy = [ "graphical.target" ];
+  };
+  services.gnome.gnome-remote-desktop.enable = true;
+  networking.firewall.allowedTCPPorts = [ 3389 ];
+  # Work around invisible mouse cursors in GNOME Remote Desktop / Wayland RDP.
+  environment.sessionVariables.MUTTER_DEBUG_DISABLE_HW_CURSORS = "1";
+
   # Enable nix-ld
   programs.nix-ld.enable = true;
 
