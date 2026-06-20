@@ -56,10 +56,10 @@
     libreoffice-fresh
     inkscape
     obs-studio
-    ollama-rocm
 
     # CLI's
     leetcode-cli
+    visidata
 
     # Utilies
     nixfmt
