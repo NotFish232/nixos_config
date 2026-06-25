@@ -160,6 +160,12 @@
     rustflags = ["-C", "target-cpu=native"]
   '';
 
+  # Set clangd C++ version
+  xdg.configFile."clangd/config.yaml".text = ''
+    CompileFlags:
+      Add: [-std=c++26]
+  '';
+
   # add clang formatting options to config
   home.file.".clang-format".text = ''
     BasedOnStyle: LLVM
