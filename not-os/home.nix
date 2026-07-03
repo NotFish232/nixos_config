@@ -163,7 +163,15 @@
   # Set clangd C++ version
   xdg.configFile."clangd/config.yaml".text = ''
     CompileFlags:
-      Add: [-std=c++26]
+      Add:
+        - -std=c++26
+        - -Wall
+        - -Wextra
+        - -Wpedantic
+  
+    Diagnostics:
+      MissingIncludes: Strict
+      UnusedIncludes: Strict
   '';
 
   # add clang formatting options to config
