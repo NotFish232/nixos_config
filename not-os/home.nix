@@ -168,6 +168,7 @@
         - -Wall
         - -Wextra
         - -Wpedantic
+        - -Wno-sign-compare
   
     Diagnostics:
       MissingIncludes: Strict
