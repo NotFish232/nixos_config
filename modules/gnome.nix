@@ -27,6 +27,7 @@
             "org.gnome.Console.desktop"
             "google-chrome.desktop"
             "spotify.desktop"
+            "obsidian.desktop"
             "discord.desktop"
             "com.obsproject.Studio.desktop"
             "org.gnome.SystemMonitor.desktop"

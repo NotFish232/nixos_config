@@ -53,6 +53,7 @@
     spotify
     vscode
     zed-editor
+    obsidian
     libreoffice-fresh
     inkscape
     obs-studio
