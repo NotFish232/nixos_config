@@ -116,12 +116,10 @@
     nixd
 
     # Latex
-    (pkgs.texlive.combine {
-      inherit (pkgs.texlive.pkgs)
-        scheme-minimal
-        latex-bin
-        ;
-    })
+    (pkgs.texlive.withPackages (ps: [
+      ps.scheme-minimal
+      ps.latex-bin
+    ]))
   ];
 
   home.sessionVariables = {
@@ -170,7 +168,7 @@
         - -Wextra
         - -Wpedantic
         - -Wno-sign-compare
-  
+
     Diagnostics:
       MissingIncludes: Strict
       UnusedIncludes: Strict
