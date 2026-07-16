@@ -203,6 +203,7 @@
       };
       "url \"git@github.com:\"".insteadOf = "https://github.com/";
       init.defaultBranch = "main";
+      push.autoSetupRemote = true;
     };
     signing = {
       signByDefault = true;
