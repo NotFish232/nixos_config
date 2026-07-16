@@ -60,6 +60,7 @@
 
     # CLI's
     leetcode-cli
+    claude-code
     visidata
 
     # Utilies
