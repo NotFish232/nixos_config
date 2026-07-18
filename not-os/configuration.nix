@@ -109,9 +109,20 @@
 
   fonts.packages = with pkgs; [
     fira-code
-    cascadia-code
     fira-code-symbols
     nerd-fonts.fira-code
+
+    # A separate variable family for Zed's UI: Fira Code plus circular Braille
+    # glyphs, retaining Fira Code's normal weight axis.
+    (runCommand "fira-code-braille" {
+      nativeBuildInputs = [ (python3.withPackages (ps: [ ps.fonttools ])) ];
+    } ''
+        mkdir -p "$out/share/fonts/truetype/FiraCodeBraille"
+        python ${../scripts/fira-code-braille.py} \
+          "${fira-code}/share/fonts/truetype/FiraCode-VF.ttf" \
+          "$out/share/fonts/truetype/FiraCodeBraille/FiraCodeBraille-VF.ttf"
+    '')
+
     noto-fonts-cjk-sans # Chinese font
   ];
 
